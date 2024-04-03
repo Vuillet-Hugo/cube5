@@ -8,12 +8,16 @@ import {
 } from "@/components/ui/menubar";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+import { Dialog, DialogTrigger, DialogContent } from "./ui/dialog";
+import { SignUpForm } from "./form/signUp";
 
 export default function Navbar() {
   return (
     <div className=" bg-primary min-h-28 w-full flex items-center justify-between">
       <div className="flex items-center ml-7">
-        <Button className="min-h-20 min-w-36 m-4 bg-gray-200 text-black">Logo SVG</Button>
+        <Button className="min-h-20 min-w-36 m-4 bg-gray-200 text-black">
+          Logo SVG
+        </Button>
         <Menubar className="max-w-96 ml-16">
           <MenubarMenu>
             <MenubarTrigger>Programmes</MenubarTrigger>
@@ -61,18 +65,27 @@ export default function Navbar() {
       </div>
       <div className="flex mr-16">
         <Input className="min-w-72" placeholder="Rechercher un programme" />
-        <Button variant="outline" className="ml-2 bg-secondary text-black">Rechercher</Button>
+        <Button variant="outline" className="ml-2 bg-secondary text-black">
+          Rechercher
+        </Button>
       </div>
-      <Menubar className="mr-7">
-      <MenubarMenu>
+      <Dialog>
+        <Menubar className="mr-7">
+          <MenubarMenu>
             <MenubarTrigger>Espace intervenant</MenubarTrigger>
             <MenubarContent>
-              <MenubarItem>Connexion</MenubarItem>
+              <DialogTrigger>
+                <MenubarItem>Connexion</MenubarItem>
+              </DialogTrigger>
               <MenubarSeparator />
               <MenubarItem>Inscription</MenubarItem>
             </MenubarContent>
           </MenubarMenu>
-      </Menubar>
+        </Menubar>
+        <DialogContent>
+          <SignUpForm />
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
