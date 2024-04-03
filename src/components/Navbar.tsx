@@ -63,7 +63,16 @@ export default function Navbar() {
         <Input className="min-w-72" placeholder="Rechercher un programme" />
         <Button variant="outline" className="ml-2 bg-secondary text-black">Rechercher</Button>
       </div>
-      <Button variant="secondary" className="mr-4">Espace intervenant</Button>
+      <Menubar className="mr-7">
+      <MenubarMenu>
+            <MenubarTrigger>Espace intervenant</MenubarTrigger>
+            <MenubarContent>
+              <MenubarItem>Connexion</MenubarItem>
+              <MenubarSeparator />
+              <MenubarItem>Inscription</MenubarItem>
+            </MenubarContent>
+          </MenubarMenu>
+      </Menubar>
     </div>
   );
 }
