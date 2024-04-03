@@ -1,13 +1,9 @@
 import Navbar from "./components/Navbar";
 import ToolBar from "./components/ToolBar";
-// import { SignUpForm } from "./components/form/signUp";
-// import axios from 'axios';
-// const apiUrl = import.meta.env.VITE_API_URL
+import { useUser } from "./providers/data.provider";
 
 function App() {
-  // axios.get(apiUrl+ "authentification").then((response) => {
-  //   console.log(response.data);
-  // });
+  const { userData } = useUser();
   return (
     <div>
       <Navbar />

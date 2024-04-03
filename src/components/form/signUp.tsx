@@ -1,7 +1,6 @@
 import { z } from "zod";
 import AutoForm, { AutoFormSubmit } from "../ui/auto-form";
-import axios from "axios";
-const apiUrl = import.meta.env.VITE_API_URL;
+import { createUser } from "@/functions/user";
 
 const formSchema = z.object({
   email: z.string().email().max(100).describe("Email"),
@@ -52,48 +51,6 @@ const formSchema = z.object({
   }),
   cgu: z.boolean().describe("J'accepte les CGU"),
 });
-
-function formatedDate(date: Date) {
-  const day = date.getDate().toString().padStart(2, "0");
-  const month = (date.getMonth() + 1).toString().padStart(2, "0");
-  const year = date.getFullYear();
-  return `${day}-${month}-${year}`;
-}
-
-function formatedUser(values: any) {
-  return {
-    civilite: values.identity.civilite,
-    nom: values.identity.nom,
-    prenom: values.identity.prenom,
-    telephone: values.identity.telephone,
-    email: values.email,
-    password: values.password,
-    dateNaissance: formatedDate(values.bornIdentity.dateNaissance),
-    adresse: values.location.adresse,
-    codePostal: values.location.codePostal,
-    ville: values.location.ville,
-    meilleurDiplome: values.qualifications.diploma.meilleurDiplome,
-    chainesCompetences: values.qualifications.chainesCompetences,
-    cgu: values.cgu,
-    isSpeaker: true,
-  };
-}
-
-const createUser = async (values: any): Promise<any> => {
-  const user = formatedUser(values);
-  try {
-    const response = await axios.post(`${apiUrl}authentification/signup`, user);
-    if (response.data.code === 1) {
-      alert(response.data.message);
-    } else {
-      alert(response.data.message);
-    }
-    return;
-  } catch (error) {
-    console.error(error);
-    return null;
-  }
-};
 
 export const SignUpForm = () => {
   return (
