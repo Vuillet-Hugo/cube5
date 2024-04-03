@@ -1,12 +1,10 @@
-
-import './App.css'
-import { Button } from './components/ui/button'
+import Layout from "./components/Layout"
 
 function App() {
 
   return (
 <div>
-  <Button variant="destructive">prout</Button>
+<Layout/>
 </div>
   )
 }
