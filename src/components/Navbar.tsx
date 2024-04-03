@@ -23,9 +23,9 @@ export default function Navbar() {
             <MenubarTrigger>Programmes</MenubarTrigger>
             <MenubarContent>
               <MenubarItem>Bac +2</MenubarItem>
-              <MenubarSeparator />
+              <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
               <MenubarItem>Bac +3</MenubarItem>
-              <MenubarSeparator />
+              <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
               <MenubarItem>Bac +5</MenubarItem>
             </MenubarContent>
           </MenubarMenu>
@@ -33,9 +33,9 @@ export default function Navbar() {
             <MenubarTrigger>Domaines</MenubarTrigger>
             <MenubarContent>
               <MenubarItem>Développement</MenubarItem>
-              <MenubarSeparator />
+              <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
               <MenubarItem>Maintenance et réseaux</MenubarItem>
-              <MenubarSeparator />
+              <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
               <MenubarItem>Rh & Management</MenubarItem>
             </MenubarContent>
           </MenubarMenu>
@@ -43,9 +43,9 @@ export default function Navbar() {
             <MenubarTrigger>Admissions</MenubarTrigger>
             <MenubarContent>
               <MenubarItem>Programme grandes écoles</MenubarItem>
-              <MenubarSeparator />
+              <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
               <MenubarItem>Niveau recommandé</MenubarItem>
-              <MenubarSeparator />
+              <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
               <MenubarItem>Reconnaissance</MenubarItem>
             </MenubarContent>
           </MenubarMenu>
@@ -53,11 +53,11 @@ export default function Navbar() {
             <MenubarTrigger>Campus</MenubarTrigger>
             <MenubarContent>
               <MenubarItem>Ile-de-France</MenubarItem>
-              <MenubarSeparator />
+              <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
               <MenubarItem>Grand-Est</MenubarItem>
-              <MenubarSeparator />
+              <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
               <MenubarItem>Sud-Est</MenubarItem>
-              <MenubarSeparator />
+              <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
               <MenubarItem>Ouest</MenubarItem>
             </MenubarContent>
           </MenubarMenu>
@@ -75,7 +75,7 @@ export default function Navbar() {
             <MenubarTrigger>Espace intervenant</MenubarTrigger>
             <MenubarContent>
               <MenubarItem>Connexion</MenubarItem>
-              <MenubarSeparator />
+              <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
               <DialogTrigger>
                 <MenubarItem>Inscription</MenubarItem>
               </DialogTrigger>
