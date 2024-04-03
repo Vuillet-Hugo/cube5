@@ -74,11 +74,11 @@ export default function Navbar() {
           <MenubarMenu>
             <MenubarTrigger>Espace intervenant</MenubarTrigger>
             <MenubarContent>
-              <DialogTrigger>
-                <MenubarItem>Connexion</MenubarItem>
-              </DialogTrigger>
+              <MenubarItem>Connexion</MenubarItem>
               <MenubarSeparator />
-              <MenubarItem>Inscription</MenubarItem>
+              <DialogTrigger>
+                <MenubarItem>Inscription</MenubarItem>
+              </DialogTrigger>
             </MenubarContent>
           </MenubarMenu>
         </Menubar>

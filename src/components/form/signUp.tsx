@@ -66,4 +66,5 @@ export const SignUpForm = () => {
 //     isSpeaker,
 //     isStudent,
 //     isStaff,
+//     AcceptCGU,
 //   }
