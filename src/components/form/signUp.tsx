@@ -55,6 +55,7 @@ const formSchema = z.object({
 export const SignUpForm = () => {
   return (
     <AutoForm
+      className="mb-10"
       formSchema={formSchema}
       onSubmit={(values) => {
         createUser(values);
@@ -76,6 +77,13 @@ export const SignUpForm = () => {
           inputProps: {
             type: "password",
             required: true,
+          },
+        },
+        identity: {
+          civilite: {
+            inputProps: {
+              placeholder: "Séléctionner un genre",
+            },
           },
         },
         cgu: {

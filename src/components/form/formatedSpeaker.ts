@@ -1,5 +1,5 @@
 import { formatedDate } from "@/helpers/formatedDate";
-import { SpeakerForm } from "@/types/types.d";
+import { SpeakerForm } from "@/types/user";
 
 export function formatedUser(values: SpeakerForm) {
   return {

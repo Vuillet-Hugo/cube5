@@ -1,5 +1,5 @@
 import { formatedUser } from "@/components/form/formatedSpeaker";
-import { SpeakerForm } from "@/types/types.d";
+import { SpeakerForm } from "@/types/user";
 import axios from "axios";
 
 const apiUrl = import.meta.env.VITE_API_URL;

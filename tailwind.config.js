@@ -17,6 +17,10 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        "cesi-jaune": "url('public/cesi_jaune.png')",
+        "footer-texture": "url('/img/footer-texture.png')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -24,8 +28,8 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#00738A",
-          foreground: "#F1F500",
+          DEFAULT: "#00738A" /* Bleu */,
+          foreground: "#fee131" /* Jaune CESI */,
         },
         secondary: {
           DEFAULT: "#EBEBEB",

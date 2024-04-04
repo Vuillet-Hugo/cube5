@@ -10,14 +10,13 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Dialog, DialogTrigger, DialogContent } from "./ui/dialog";
 import { SignUpForm } from "./form/signUp";
+import { ScrollArea } from "./ui/scroll-area";
 
 export default function Navbar() {
   return (
     <div className=" bg-primary min-h-28 w-full flex items-center justify-between">
       <div className="flex items-center ml-7">
-        <Button className="min-h-20 min-w-36 m-4 bg-gray-200 text-black">
-          Logo SVG
-        </Button>
+        <Button className="min-h-20 min-w-36 m-4 bg-cesi-jaune bg-cover bg-center"></Button>
         <Menubar className="max-w-96 ml-16">
           <MenubarMenu>
             <MenubarTrigger>Programmes</MenubarTrigger>
@@ -82,8 +81,10 @@ export default function Navbar() {
             </MenubarContent>
           </MenubarMenu>
         </Menubar>
-        <DialogContent>
-          <SignUpForm />
+        <DialogContent className="h-screen">
+          <ScrollArea className="h-screen p-4">
+            <SignUpForm />
+          </ScrollArea>
         </DialogContent>
       </Dialog>
     </div>
