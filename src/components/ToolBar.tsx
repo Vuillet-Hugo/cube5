@@ -1,5 +1,5 @@
 import {
-  Cookie,
+  CalendarDays,
   Facebook,
   History,
   Home,
@@ -12,8 +12,17 @@ import {
   Youtube,
 } from "lucide-react";
 import { Separator } from "./ui/separator";
-
-export default function ToolBar() {
+import { RefObject } from "react";
+export type ToolBarProps = {
+  events: RefObject<HTMLElement>;
+  actualites: RefObject<HTMLElement>;
+  about: RefObject<HTMLElement>;
+};
+export default function ToolBar(props: ToolBarProps) {
+  const { about, actualites, events } = props;
+  const scrollIntoView = (ref: RefObject<HTMLElement>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="flex flex-col w-16 bg-secondary min-h-screen min-w-60 justify-between">
       <div className="flex flex-col ml-4 pt-16 mr-6">
@@ -21,22 +30,30 @@ export default function ToolBar() {
           <Home size={20} className="mr-3 mt-1" /> Accueil
         </div>
         <Separator className="my-4 bg-primary-foreground" />
-        <div className="text-lg hover:text-primary flex">
+        <div
+          onClick={() => scrollIntoView(about)}
+          className="text-lg hover:text-primary flex"
+        >
           <History size={20} className="mr-3 mt-1" />A propos
         </div>
         <Separator className="my-4 bg-primary-foreground" />
-        <div className="text-lg hover:text-primary flex">
+        <div
+          className="text-lg hover:text-primary flex"
+          onClick={() => scrollIntoView(actualites)}
+        >
           <Newspaper size={20} className="mr-3 mt-1" />
           Actualités
         </div>
         <Separator className="my-4 bg-primary-foreground" />
-        <div className="text-lg hover:text-primary flex">
-          <Send size={20} className="mr-3 mt-1" /> Nous contacter
+        <div
+          onClick={() => scrollIntoView(events)}
+          className="text-lg hover:text-primary flex"
+        >
+          <CalendarDays size={20} className="mr-3 mt-1" /> Evenements
         </div>
         <Separator className="my-4 bg-primary-foreground" />
         <div className="text-lg hover:text-primary flex">
-          <Cookie size={20} className="mr-3 mt-1" />
-          Politique de cookies
+          <Send size={20} className="mr-3 mt-1" /> Nous contacter
         </div>
         <Separator className="my-4 bg-primary-foreground" />
         <div className="text-lg hover:text-primary flex">

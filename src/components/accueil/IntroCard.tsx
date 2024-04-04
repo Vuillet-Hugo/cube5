@@ -3,8 +3,8 @@ import { Card, CardTitle, CardContent } from "../ui/card";
 
 export default function IntroCard() {
   return (
-    <div className="flex justify-around h-1/2 mt-10">
-      <Card className="w-2/5 p-10 border-primary">
+    <div className="flex justify-around mt-10">
+      <Card className="w-2/5 aspect-square p-10 border-primary">
         <CardTitle>
           Campus d’enseignement supérieur et de formation professionnelle, CESI
           c’est :
