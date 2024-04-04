@@ -19,7 +19,11 @@ module.exports = {
     extend: {
       backgroundImage: {
         "cesi-jaune": "url('public/cesi_jaune.png')",
+        "banniere-cesi": "url('public/bannierecesiV2.png')",
         "footer-texture": "url('/img/footer-texture.png')",
+      },
+      boxShadow: {
+        "3xl": "0 5px 15px",
       },
       colors: {
         border: "hsl(var(--border))",
