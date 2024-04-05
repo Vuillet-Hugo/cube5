@@ -19,7 +19,9 @@ export default function Navbar() {
         <Button className="min-h-20 min-w-36 m-4 bg-cesi-jaune bg-cover bg-center"></Button>
         <Menubar className="max-w-96 ml-16">
           <MenubarMenu>
-            <MenubarTrigger>Programmes</MenubarTrigger>
+            <MenubarTrigger className=" hover:cursor-pointer">
+              Programmes
+            </MenubarTrigger>
             <MenubarContent>
               <MenubarItem>Bac +2</MenubarItem>
               <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
@@ -29,7 +31,9 @@ export default function Navbar() {
             </MenubarContent>
           </MenubarMenu>
           <MenubarMenu>
-            <MenubarTrigger>Domaines</MenubarTrigger>
+            <MenubarTrigger className=" hover:cursor-pointer">
+              Domaines
+            </MenubarTrigger>
             <MenubarContent>
               <MenubarItem>Développement</MenubarItem>
               <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
@@ -39,7 +43,9 @@ export default function Navbar() {
             </MenubarContent>
           </MenubarMenu>
           <MenubarMenu>
-            <MenubarTrigger>Admissions</MenubarTrigger>
+            <MenubarTrigger className=" hover:cursor-pointer">
+              Admissions
+            </MenubarTrigger>
             <MenubarContent>
               <MenubarItem>Programme grandes écoles</MenubarItem>
               <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
@@ -49,7 +55,9 @@ export default function Navbar() {
             </MenubarContent>
           </MenubarMenu>
           <MenubarMenu>
-            <MenubarTrigger>Campus</MenubarTrigger>
+            <MenubarTrigger className=" hover:cursor-pointer">
+              Campus
+            </MenubarTrigger>
             <MenubarContent>
               <MenubarItem>Ile-de-France</MenubarItem>
               <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
@@ -71,7 +79,9 @@ export default function Navbar() {
       <Dialog>
         <Menubar className="mr-7">
           <MenubarMenu>
-            <MenubarTrigger>Espace intervenant</MenubarTrigger>
+            <MenubarTrigger className=" hover:cursor-pointer">
+              Espace intervenant
+            </MenubarTrigger>
             <MenubarContent>
               <MenubarItem>Connexion</MenubarItem>
               <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />

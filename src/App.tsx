@@ -6,6 +6,8 @@ import IntroCard from "./components/accueil/IntroCard";
 import StatsCard from "./components/accueil/StatsCard";
 import Evenements from "./components/accueil/evenements";
 import { Separator } from "./components/ui/separator";
+import Contacts from "./components/accueil/Contacts";
+import ScrollToTopButton from "./components/accueil/ScrollToTopBtn";
 // import { useUser } from "./providers/data.provider";
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
   const scrollActualites = useRef(null);
   const scrollEvents = useRef(null);
   const scrollAbout = useRef(null);
+  const scrollContact = useRef(null);
   return (
     <div className="bg-gray-50">
       <Navbar />
@@ -21,6 +24,7 @@ function App() {
           about={scrollAbout}
           actualites={scrollActualites}
           events={scrollEvents}
+          contact={scrollContact}
         />
         <div className="flex grow flex-col">
           <div className="min-w-full h-96 bg-banniere-cesi bg-cover rounded" />
@@ -40,8 +44,12 @@ function App() {
           </div>
           <Separator className="w-72 mt-3 ml-14 bg-primary-foreground h-2" />
           <Evenements />
-          <div className="text-5xl ml-12 mt-12">S'engager, Accompagner</div>
+          <div className="text-5xl ml-12 mt-12" ref={scrollContact}>
+            S'engager, Accompagner
+          </div>
           <Separator className="w-72 mt-3 ml-14 bg-primary-foreground h-2" />
+          <Contacts />
+          <ScrollToTopButton />
         </div>
       </div>
     </div>
