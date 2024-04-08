@@ -12,54 +12,40 @@ export default function Actualites() {
               Les Causeries CESI : du 24 octobre au 30 avril 2024
             </CardTitle>
             <div className="text-xl">
-              Au mois d’octobre, les Causeries CESI reprennent ! Cycle de
-              conférences gratuites animées par des experts et professionnels
-              depuis 10 ans. Les Causeries CESI exposent les enjeux
-              d’évolution...
+              Au mois d’octobre, les Causeries CESI reprennent ! Cycle de conférences gratuites
+              animées par des experts et professionnels depuis 10 ans. Les Causeries CESI exposent
+              les enjeux d’évolution...
             </div>
           </div>
         </div>
         <div className="flex flex-col w-1/2">
           <div className="h-1/4">
-            <div className="text-xl text-primary">
-              ACTUALITÉS Publié le 27 mars 2024
-            </div>
+            <div className="text-xl text-primary">ACTUALITÉS Publié le 27 mars 2024</div>
             <div className="text-lg">
-              Rouen mobilité intelligente pour tous : avec le projet TIGA, CESI
-              s’engage dans le développement de modes de déplacement à grande
-              échelle
+              Rouen mobilité intelligente pour tous : avec le projet TIGA, CESI s’engage dans le
+              développement de modes de déplacement à grande échelle
             </div>
           </div>
           <Separator className="mb-5 bg-primary-foreground" />
           <div className="h-1/4">
-            <div className="text-xl text-primary">
-              {" "}
-              ACTUALITÉS Publié le 27 mars 2024
-            </div>
+            <div className="text-xl text-primary"> ACTUALITÉS Publié le 27 mars 2024</div>
             <div className="text-lg">
-              MobE : quand CESI fait des déplacements quotidiens des étudiants
-              un programme ambitieux d’économies d’énergie
+              MobE : quand CESI fait des déplacements quotidiens des étudiants un programme
+              ambitieux d’économies d’énergie
             </div>
           </div>
           <Separator className="mb-5 bg-primary-foreground" />
           <div className="h-1/4">
-            <div className="text-xl text-primary">
-              {" "}
-              ACTUALITÉS Publié le 25 mars 2024
-            </div>
+            <div className="text-xl text-primary">ACTUALITÉS Publié le 25 mars 2024</div>
             <div className="text-lg">
-              Retour sur le Workshop IoT - CESI Arras et l'Université Strathmore
-              à Nairobi
+              Retour sur le Workshop IoT - CESI Arras et l'Université Strathmore à Nairobi
             </div>
           </div>
           <Separator className="mb-5 bg-primary-foreground" />
           <div className="h-1/4">
-            <div className="text-xl text-primary">
-              ACTUALITÉS Publié le 23 mars 2024
-            </div>
+            <div className="text-xl text-primary">ACTUALITÉS Publié le 23 mars 2024</div>
             <div className="text-lg">
-              Parcoursup : l'accompagnement personnalisé de CESI pour vos
-              démarches
+              Parcoursup : l'accompagnement personnalisé de CESI pour vos démarches
             </div>
           </div>
         </div>

@@ -1,46 +1,28 @@
-
 // react-router-dom :
-import { createBrowserRouter} from "react-router-dom";
-
-// components :
+import { createBrowserRouter } from "react-router-dom";
 
 // pages :
-
-// css :
-import App from "./App";
-import { SignInForm } from "./components/form/signIn";
-import { SignUpForm } from "./components/form/signUp";
+import HomePage from "./components/pages/home/home.page";
+import NewsPage from "./News.page";
+import { FormationsPage } from "./components/formations/formations.page";
 
 export const router = createBrowserRouter([
-  {
-    path: "/home",
-    element: "<HomePage />",
-    children: [
-      {
-        path: "dashboard",
-        element: "<DashBoardComponent />",
-      },
-    ],
-  },
-
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "signIn",
-        element: <SignInForm />,
-      },
-      {
-        path: "signUp",
-        element: <SignUpForm />,
-      },
-    ],
-
-  },
   {
     path: "*",
     element: <h1>Not Found</h1>,
   },
+  {
+    path: "/",
+    element: <HomePage />,
+    children: [
+      {
+        path: "/",
+        element: <NewsPage />,
+      },
+      {
+        path: "/formations",
+        element: <FormationsPage />,
+      },
+    ],
+  },
 ]);
-

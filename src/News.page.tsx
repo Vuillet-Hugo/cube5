@@ -11,7 +11,7 @@ import ScrollToTopButton from "./components/accueil/ScrollToTopBtn";
 import { Outlet } from "react-router-dom";
 // import { useUser } from "./providers/data.provider";
 
-function App() {
+export default function NewsPage() {
   // const { userData } = useUser();
   const scrollActualites = useRef(null);
   const scrollEvents = useRef(null);
@@ -19,7 +19,7 @@ function App() {
   const scrollContact = useRef(null);
   return (
     <div className="bg-gray-50">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="flex flex-row">
         <ToolBar
           about={scrollAbout}
@@ -57,5 +57,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
