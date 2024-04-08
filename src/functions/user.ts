@@ -19,3 +19,19 @@ export const createUser = async (values: SpeakerForm): Promise<any> => {
     return null;
   }
 };
+
+export const signIn = async (values: { email: string; password: string }): Promise<any> => {
+  try {
+    const response = await axios.post(`${apiUrl}authentification/signin`, values);
+    if (response.data.code === 1) {
+      alert(response.data.message);
+    localStorage.setItem("token", response.data.payload.token);
+    } else {
+      alert(response.data.message);
+    }
+   
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+};

@@ -12,8 +12,13 @@ import { Dialog, DialogTrigger, DialogContent } from "./ui/dialog";
 import { SignInForm } from "./form/signIn";
 import { SignUpForm } from "./form/signUp";
 import { ScrollArea } from "./ui/scroll-area";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { useState } from "react";
 
 export default function Navbar() {
+
+  const [sign, setSign] = useState<boolean | null>(null)
+  console.log(sign);
   return (
     <div className=" bg-primary min-h-28 w-full flex items-center justify-between">
       <div className="flex items-center ml-7">
@@ -78,25 +83,35 @@ export default function Navbar() {
         </Button>
       </div>
       <Dialog>
-        <Menubar className="mr-7">
-          <MenubarMenu>
-            <MenubarTrigger className=" hover:cursor-pointer">
-              Espace intervenant
-            </MenubarTrigger>
-            <MenubarContent>
-              <MenubarItem>Connexion</MenubarItem>
-              <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
-              <DialogTrigger>
-                <MenubarItem>Inscription</MenubarItem>
-              </DialogTrigger>
-            </MenubarContent>
-          </MenubarMenu>
-        </Menubar>
-        <DialogContent className="h-screen">
-          <ScrollArea className="h-screen p-4">
-            <SignUpForm />
-          </ScrollArea>
-        </DialogContent>
+        <Sheet>
+          <Menubar className="mr-7">
+            <MenubarMenu>
+              <MenubarTrigger className=" hover:cursor-pointer">
+                Espace intervenant
+              </MenubarTrigger>
+              <MenubarContent>
+                <SheetTrigger asChild onClick={() => {
+                  setSign(true)
+                }}>
+                  <MenubarItem>Connexion</MenubarItem>
+                </SheetTrigger>
+                <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
+                <DialogTrigger asChild onClick={() => {
+                  setSign(false)
+                }}>
+                  <MenubarItem>Inscription</MenubarItem>
+                </DialogTrigger>
+              </MenubarContent>
+            </MenubarMenu>
+          </Menubar>
+          {sign ? <SheetContent>
+            <SignInForm />
+          </SheetContent> : <DialogContent className="h-screen">
+            <ScrollArea className="h-screen p-4">
+              <SignUpForm />
+            </ScrollArea>
+          </DialogContent>}
+        </Sheet>
       </Dialog>
     </div>
   );
