@@ -9,7 +9,7 @@ import {
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Dialog, DialogTrigger, DialogContent } from "./ui/dialog";
-import { SignUpForm } from "./form/signUp";
+import { SignInForm } from "./form/signIn";
 
 export default function Navbar() {
   return (
@@ -83,7 +83,7 @@ export default function Navbar() {
           </MenubarMenu>
         </Menubar>
         <DialogContent>
-          <SignUpForm />
+          <SignInForm />
         </DialogContent>
       </Dialog>
     </div>
