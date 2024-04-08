@@ -82,23 +82,6 @@ export default function Navbar() {
         </Button>
       </div>
       <Dialog>
-        <Menubar className="mr-7">
-          <MenubarMenu>
-            <MenubarTrigger className=" hover:cursor-pointer">Espace intervenant</MenubarTrigger>
-            <MenubarContent>
-              <MenubarItem>Connexion</MenubarItem>
-              <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
-              <DialogTrigger>
-                <MenubarItem>Inscription</MenubarItem>
-              </DialogTrigger>
-            </MenubarContent>
-          </MenubarMenu>
-        </Menubar>
-        <DialogContent className="h-screen">
-          <ScrollArea className="h-screen p-4">
-            <SignUpForm />
-          </ScrollArea>
-        </DialogContent>
         <Sheet>
           <Menubar className="mr-7">
             <MenubarMenu>
