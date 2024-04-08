@@ -1,3 +1,6 @@
+// react-router-dom :
+import { Link } from "react-router-dom";
+
 import {
   Menubar,
   MenubarContent,
@@ -17,24 +20,24 @@ export default function Navbar() {
   return (
     <div className=" bg-primary min-h-28 w-full flex items-center justify-between">
       <div className="flex items-center ml-7">
-        <Button className="min-h-20 min-w-36 m-4 bg-cesi-jaune bg-cover bg-center"></Button>
+        <Button className="min-h-20 min-w-36 m-4 bg-cesi-jaune bg-cover bg-center">
+          <Link to={"/"} style={{ height: "100%", width: "100%" }}></Link>
+        </Button>
         <Menubar className="max-w-96 ml-16">
           <MenubarMenu>
             <MenubarTrigger className=" hover:cursor-pointer">
-              Programmes
+              <Link to={"/formations"}>Nos Diplômes</Link>
             </MenubarTrigger>
-            <MenubarContent>
+            {/* <MenubarContent>
               <MenubarItem>Bac +2</MenubarItem>
               <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
               <MenubarItem>Bac +3</MenubarItem>
               <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
               <MenubarItem>Bac +5</MenubarItem>
-            </MenubarContent>
+            </MenubarContent> */}
           </MenubarMenu>
-          <MenubarMenu>
-            <MenubarTrigger className=" hover:cursor-pointer">
-              Domaines
-            </MenubarTrigger>
+          {/* <MenubarMenu>
+            <MenubarTrigger className=" hover:cursor-pointer">Domaines</MenubarTrigger>
             <MenubarContent>
               <MenubarItem>Développement</MenubarItem>
               <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
@@ -42,11 +45,9 @@ export default function Navbar() {
               <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
               <MenubarItem>Rh & Management</MenubarItem>
             </MenubarContent>
-          </MenubarMenu>
+          </MenubarMenu> */}
           <MenubarMenu>
-            <MenubarTrigger className=" hover:cursor-pointer">
-              Admissions
-            </MenubarTrigger>
+            <MenubarTrigger className=" hover:cursor-pointer">Admissions</MenubarTrigger>
             <MenubarContent>
               <MenubarItem>Programme grandes écoles</MenubarItem>
               <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
@@ -56,9 +57,7 @@ export default function Navbar() {
             </MenubarContent>
           </MenubarMenu>
           <MenubarMenu>
-            <MenubarTrigger className=" hover:cursor-pointer">
-              Campus
-            </MenubarTrigger>
+            <MenubarTrigger className=" hover:cursor-pointer">Campus</MenubarTrigger>
             <MenubarContent>
               <MenubarItem>Ile-de-France</MenubarItem>
               <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />
@@ -80,9 +79,7 @@ export default function Navbar() {
       <Dialog>
         <Menubar className="mr-7">
           <MenubarMenu>
-            <MenubarTrigger className=" hover:cursor-pointer">
-              Espace intervenant
-            </MenubarTrigger>
+            <MenubarTrigger className=" hover:cursor-pointer">Espace intervenant</MenubarTrigger>
             <MenubarContent>
               <MenubarItem>Connexion</MenubarItem>
               <MenubarSeparator className="bg-primary-foreground mr-2 ml-2" />

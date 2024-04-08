@@ -1,45 +1,28 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-
 // react-router-dom :
-import { createBrowserRouter, defer, RouterProvider } from "react-router-dom";
-
-// components :
+import { createBrowserRouter } from "react-router-dom";
 
 // pages :
-
-// css :
-import "./css/index.css";
+import HomePage from "./components/pages/home/home.page";
+import NewsPage from "./News.page";
+import { FormationsPage } from "./components/formations/formations.page";
 
 export const router = createBrowserRouter([
-  {
-    path: "/home",
-    element: "<HomePage />",
-    children: [
-      {
-        path: "dashboard",
-        element: "<DashBoardComponent />",
-      },
-    ],
-  },
-
-  {
-    path: "/",
-    element: "<AuthentificationPage />",
-  },
   {
     path: "*",
     element: <h1>Not Found</h1>,
   },
+  {
+    path: "/",
+    element: <HomePage />,
+    children: [
+      {
+        path: "/",
+        element: <NewsPage />,
+      },
+      {
+        path: "/formations",
+        element: <FormationsPage />,
+      },
+    ],
+  },
 ]);
-
-const container = document.getElementById("root");
-if (container) {
-  const root = createRoot(container);
-
-  root.render(
-    <React.StrictMode>
-      <RouterProvider router={router} />
-    </React.StrictMode>
-  );
-}
