@@ -67,7 +67,7 @@ export type StudentFormType = {
       meilleurDiplome: string;
       niveau: string;
     };
-    cv: file;
+    cv: File;
   };
 };
 

@@ -31,7 +31,7 @@ const formSchema = z.object({
             })
             .describe("Diplôme"),
         // cv: z.string().max(100).describe("Curriculum Vitae ( PDF )"),
-        cv: z.instanceof(File).describe("Curriculum Vitae ( PDF )"),
+        cv: z.custom<File>().describe("Curriculum Vitae ( PDF )"),
     }),
 
 
