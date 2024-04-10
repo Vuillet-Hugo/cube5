@@ -1,6 +1,8 @@
 import { z } from "zod";
 import AutoForm, { AutoFormSubmit } from "../ui/auto-form";
 import { createUser } from "@/functions/user";
+import { formatedUser } from "./formatedSpeaker";
+import { FormatedSpeaker } from "@/types/user";
 
 const formSchema = z.object({
   email: z.string().email().max(100).describe("Email"),
@@ -58,7 +60,8 @@ export const SignUpForm = () => {
       className="mb-10"
       formSchema={formSchema}
       onSubmit={(values) => {
-        createUser(values);
+       const user =  formatedUser(values);
+        createUser(user as FormatedSpeaker);
       }}
       fieldConfig={{
         email: {

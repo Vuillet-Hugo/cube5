@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import Navbar from "./components/Navbar";
 import ToolBar from "./components/ToolBar";
 import Actualites from "./components/accueil/Actualites";
 import IntroCard from "./components/accueil/IntroCard";

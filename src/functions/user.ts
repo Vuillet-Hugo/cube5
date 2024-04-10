@@ -1,11 +1,11 @@
-import { formatedUser } from "@/components/form/formatedSpeaker";
-import { SpeakerForm } from "@/types/user";
+
+import { FormatedSpeaker, FormatedStudent } from "@/types/user";
 import axios from "axios";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
-export const createUser = async (values: SpeakerForm): Promise<any> => {
-  const user = formatedUser(values);
+export const createUser = async (values: FormatedSpeaker | FormatedStudent): Promise<any> => {
+    const user = values
   try {
     const response = await axios.post(`${apiUrl}authentification/signup`, user);
     if (response.data.code === 1) {
