@@ -15,7 +15,7 @@ export function formatedUserStudent(values: StudentFormType) {
     ville: values.location.ville,
     meilleurDiplome: values.qualifications.diploma.meilleurDiplome,
     niveau: values.qualifications.diploma.niveau,
-    cv: values.qualifications.cv,
+    pdf: values.qualifications.cv,
     isStudent: true,
   };
 }
