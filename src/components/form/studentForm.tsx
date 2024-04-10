@@ -30,7 +30,8 @@ const formSchema = z.object({
                 niveau: z.enum(["Bac", "Bac+2", "Bac+3", "Bac+5"]).describe("Niveau"),
             })
             .describe("Diplôme"),
-        cv: z.string().max(100).describe("Curriculum Vitae ( PDF )"),
+        // cv: z.string().max(100).describe("Curriculum Vitae ( PDF )"),
+        cv: z.instanceof(File).describe("Curriculum Vitae ( PDF )"),
     }),
 
 

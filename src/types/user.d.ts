@@ -84,6 +84,6 @@ export type FormatedStudent = {
   ville: string;
   meilleurDiplome: string;
   niveau: string;
-  cv: file;
+  pdf: file;
   // signUpPending: string;
 };
