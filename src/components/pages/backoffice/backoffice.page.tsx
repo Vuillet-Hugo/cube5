@@ -11,7 +11,7 @@ import "./backoffice.style.css";
 
 export default function BackOffice() {
   const [token, setToken] = useState<string>(
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3MTI3MzYxNTEsImlhdCI6MTcxMjczNjE1MSwianRpIjoidW5pcXVlX2lkIiwiZGF0YSI6eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIn19.siVoC5rxu7tDJsSDwaBThIzIrWG6EO09mDeTZQBOQVc"
+    localStorage.getItem("token") || ""
   );
   const navigate = useNavigate();
 
@@ -30,7 +30,7 @@ export default function BackOffice() {
     };
 
     checkAuth();
-  }, []);
+  }, [token, navigate]);
 
   return (
     <section className="backoffice">

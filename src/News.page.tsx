@@ -8,10 +8,8 @@ import { Separator } from "./components/ui/separator";
 import Contacts from "./components/accueil/Contacts";
 import ScrollToTopButton from "./components/accueil/ScrollToTopBtn";
 import { Outlet } from "react-router-dom";
-// import { useUser } from "./providers/data.provider";
 
 export default function NewsPage() {
-  // const { userData } = useUser();
   const scrollActualites = useRef(null);
   const scrollEvents = useRef(null);
   const scrollAbout = useRef(null);
