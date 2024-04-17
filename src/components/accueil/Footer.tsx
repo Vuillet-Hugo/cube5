@@ -7,9 +7,9 @@ return(
         <Button className="min-h-20 min-w-36 m-4 bg-cesi-jaune bg-cover bg-center "></Button>
         <div className='flex items-stretch justify-center space-x-10 mt-0 '>
             <div className='flex flex-col space-y-4'>
-                <p className='text-xl'>Programmes</p>
+                <Link to='/formations' className='text-xl'>Programmes</Link>
                 <div className='text-sm flex flex-col space-y-1'>
-                    <Link to="/Bac2">Bac +2</Link>
+                    <p>Bac +2</p>
                     <p>Bac +3</p>
                     <p>Bac +5</p>
                 </div>
@@ -17,43 +17,36 @@ return(
             <div className='flex flex-col space-y-4' >
                 <p className='text-xl'>Domaines</p>
                 <div className='text-sm flex flex-col space-y-1'>
-                    <p>Développement</p>
-                    <p>Maintenance et Réseaux</p>
-                    <p>Rh & Management</p>
+                    <Link to=''>Développement</Link>
+                    <Link to =''>Maintenance et Réseaux</Link>
+                    <Link to =''>Rh & Management</Link>
                 </div>
             </div>
             <div className='flex flex-col space-y-4'>
                 <p className='text-xl'>Admissions</p>
                 <div className='text-sm flex flex-col space-y-1'>
-                    <p>Programmes grandes écoles</p>
-                    <p>Niveau recommandé</p>
-                    <p>Reconnaissance</p>
+                    <Link to =''>Programmes grandes écoles</Link>
+                    <Link to =''>Niveau recommandé</Link>
+                    <Link to =''>Reconnaissance</Link>
                 </div>
             </div>
             <div className='flex flex-col space-y-4'>
                 <p className='text-xl'>Campus</p>
                 <div className='text-sm flex flex-col space-y-1'>
-                    <p>Ile-de-France</p>
-                    <p>Grand-Est</p>
-                    <p>Sud-Est</p>
-                    <p>Ouest</p>
-                </div>
-            </div>
-            <div className='flex flex-col space-y-4'>
-                <p className='text-xl'>Espace Intervenants</p>
-                <div className='text-sm flex flex-col space-y-1'>
-                    <p>Inscription</p>
-                    <p>Connexion</p>
+                    <Link to =''>Ile-de-France</Link>
+                    <Link to =''>Grand-Est</Link>
+                    <Link to =''>Sud-Est</Link>
+                    <Link to =''>Ouest</Link>
                 </div>
             </div>
         </div>
         <div className='flex items-stretch justify-around mt-8'>
-            <p>Accessibilité</p>
-            <p>CGU</p>
-            <p>Données personnelles</p>
-            <p>Mentions légales</p>
-            <p>Politique de confidentialité</p>
-            <p>Cookies</p>
+            <Link to =''>Accessibilité</Link>
+            <Link to =''>CGU</Link>
+            <Link to =''>Données personnelles</Link>
+            <Link to =''>Mentions légales</Link>
+            <Link to =''>Politique de confidentialité</Link>
+            <Link to =''>Cookies</Link>
         </div>
     </div>
 )

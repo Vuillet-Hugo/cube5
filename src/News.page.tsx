@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import Navbar from "./components/Navbar";
 import ToolBar from "./components/ToolBar";
 import Actualites from "./components/accueil/Actualites";
 import IntroCard from "./components/accueil/IntroCard";
@@ -8,18 +7,18 @@ import Evenements from "./components/accueil/evenements";
 import { Separator } from "./components/ui/separator";
 import Contacts from "./components/accueil/Contacts";
 import ScrollToTopButton from "./components/accueil/ScrollToTopBtn";
-import Footer from './components/accueil/Footer'
-// import { useUser } from "./providers/data.provider";
 
-function App() {
-  // const { userData } = useUser();
+import { Outlet } from "react-router-dom";
+
+
+export default function NewsPage() {
   const scrollActualites = useRef(null);
   const scrollEvents = useRef(null);
   const scrollAbout = useRef(null);
   const scrollContact = useRef(null);
   return (
     <div className="bg-gray-50">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="flex flex-row">
         <ToolBar
           about={scrollAbout}
@@ -53,9 +52,9 @@ function App() {
           <ScrollToTopButton />
         </div>
       </div>
-      < Footer />
+
+      <Outlet />
+
     </div>
   );
 }
-
-export default App;

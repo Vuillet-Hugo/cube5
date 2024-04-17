@@ -1,58 +1,49 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-
-
 // react-router-dom :
-import { createBrowserRouter, defer, RouterProvider } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 
 // components :
-import Footer from "./components/accueil/Footer";
-import Bac2 from "./components/accueil/Bac2";
 
 // pages :
+import HomePage from "./components/pages/home/home.page";
+import NewsPage from "./News.page";
+import { FormationsPage } from "./components/formations/formations.page";
+import BackOffice from "./components/pages/backoffice/backoffice.page";
+import Personel from "./components/backoffice/personel/personel.component";
+import Etudiant from "./components/backoffice/etudiants/etudiant.component";
+import { SignUpForm } from "./components/form/signUp";
 
-// css :
-import "./css/index.css";
 
 export const router = createBrowserRouter([
-  {
-    path: "/home",
-    element: <HomePage />,
-    children: [
-      {
-        path: "dashboard",
-        element: "<DashBoardComponent />",
-      },
-    ],
-  },
-  {
-    path: "/Footer",
-    element: "<Footer />",
-    children: [
-      {
-        path: "Bac2",
-        element: "<Bac2 />"
-      }
-    ]
-  },
-
-  {
-    path: "/",
-    element: "<AuthentificationPage />",
-  },
   {
     path: "*",
     element: <h1>Not Found</h1>,
   },
+  {
+    path: "/personel",
+    element: <BackOffice />,
+    children: [
+      {
+        path: "",
+        element: <Personel />,
+      },
+      {
+        path: "etudiant",
+        element: <Etudiant />,
+      },
+    ],
+  },
+  {
+    path: "/",
+    element: <HomePage />,
+    children: [
+      {
+        path: "/",
+        element: <NewsPage />,
+      },
+      {
+        path: "/formations",
+        element: <FormationsPage />,
+      },
+    ],
+  },
 ]);
-
-const container = document.getElementById("root");
-if (container) {
-  const root = createRoot(container);
-
-  root.render(
-    <React.StrictMode>
-      <RouterProvider router={router} />
-    </React.StrictMode>
-  );
-}

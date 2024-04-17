@@ -1,0 +1,50 @@
+.backoffice {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom {
+  display: flex;
+  flex-grow: 1;
+}
+
+.sidenav,
+.content {
+  flex-grow: 1;
+  padding: 30px;
+}
+
+/* // sidenav :  */
+.sidenav {
+  flex: 1;
+}
+
+.sidenav ul li {
+  margin: 10px 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.sidenav ul li a {
+  transition: all 200ms ease-in-out;
+}
+
+.sidenav ul li:hover {
+  background-color: #e8e8e8;
+}
+
+.sidenav ul li:hover a {
+  padding-left: 15px;
+}
+
+/* // content :  */
+.content {
+  flex: 4;
+  background-color: #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

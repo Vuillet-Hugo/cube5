@@ -7,7 +7,7 @@ export type FormatedSpeaker = {
   civilite: string;
   nom: string;
   prenom: string;
-  telephone: string;
+  telephone: number;
   email: string;
   password: string;
   dateNaissance: string;
@@ -45,4 +45,45 @@ export type SpeakerForm = {
     chainesCompetences: chaineCompetence[];
   };
   cgu: boolean;
+};
+
+export type StudentFormType = {
+  email: string;
+  identity: {
+    civilite: string;
+    nom: string;
+    prenom: string;
+    telephone: number;
+    dateNaissance: Date;
+    pays: string;
+  };
+  location: {
+    adresse: string;
+    codePostal: string;
+    ville: string;
+  };
+  qualifications: {
+    diploma: {
+      meilleurDiplome: string;
+      niveau: string;
+    };
+    cv: File;
+  };
+};
+
+export type FormatedStudent = {
+  email: string;
+  civilite: string;
+  nom: string;
+  prenom: string;
+  telephone: number;
+  dateNaissance: string;
+  pays: string;
+  adresse: string;
+  codePostal: string;
+  ville: string;
+  meilleurDiplome: string;
+  niveau: string;
+  pdf: file;
+  // signUpPending: string;
 };
