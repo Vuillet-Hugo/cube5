@@ -8,6 +8,7 @@ import { FormationsPage } from "./components/formations/formations.page";
 import BackOffice from "./components/pages/backoffice/backoffice.page";
 import Personel from "./components/backoffice/personel/personel.component";
 import Etudiant from "./components/backoffice/etudiants/etudiant.component";
+import Positionnement from "./components/backoffice/positionnement/positionnement.component";
 
 export const router = createBrowserRouter([
   {
@@ -19,12 +20,16 @@ export const router = createBrowserRouter([
     element: <BackOffice />,
     children: [
       {
-        path: "",
+        path: "info",
         element: <Personel />,
       },
       {
         path: "etudiant",
         element: <Etudiant />,
+      },
+      {
+        path: "positionnement",
+        element: <Positionnement />,
       },
     ],
   },

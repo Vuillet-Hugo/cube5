@@ -42,9 +42,8 @@
 
 /* // content :  */
 .content {
-  flex: 4;
+  flex: 5;
+  width: 100%;
   background-color: #e8e8e8;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }

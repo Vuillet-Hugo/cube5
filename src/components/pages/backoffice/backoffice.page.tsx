@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 
 // css :
 import "./backoffice.style.css";
+import { Separator } from "@/components/ui/separator";
 
 export default function BackOffice() {
   const [token, setToken] = useState<string>(
@@ -41,12 +42,15 @@ export default function BackOffice() {
             <li>
               <Link to={""}>Étudiants</Link>
             </li>
+            <Separator className="bg-primary-foreground" />
             <li>
-              <Link to={""}>Informations personnel</Link>
+              <Link to={"/personel/info"}>Informations personnel</Link>
             </li>
+            <Separator className="bg-primary-foreground" />
             <li>
-              <Link to={""}>Positionnement</Link>
+              <Link to={"/personel/positionnement"}>Positionnement</Link>
             </li>
+            <Separator className="bg-primary-foreground" />
             <li>
               <Link to={""}>Paramètres</Link>
             </li>
