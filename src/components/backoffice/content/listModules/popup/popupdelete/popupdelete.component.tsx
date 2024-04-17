@@ -4,7 +4,6 @@ import axios from "axios";
 // interfaces :
 import { IFormModule } from "../../../content.component";
 import LoaderComponent from "@/components/shared/loader/loader.component";
-
 // css :
 import "./popupdelete.style.css";
 
