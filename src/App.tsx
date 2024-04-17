@@ -8,6 +8,7 @@ import Evenements from "./components/accueil/evenements";
 import { Separator } from "./components/ui/separator";
 import Contacts from "./components/accueil/Contacts";
 import ScrollToTopButton from "./components/accueil/ScrollToTopBtn";
+import Footer from './components/accueil/Footer'
 // import { useUser } from "./providers/data.provider";
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
           <ScrollToTopButton />
         </div>
       </div>
+      < Footer />
     </div>
   );
 }
