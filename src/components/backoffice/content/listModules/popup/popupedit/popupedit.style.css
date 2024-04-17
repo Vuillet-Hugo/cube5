@@ -1,0 +1,97 @@
+body.lock-scroll {
+  overflow: hidden;
+}
+
+.bg {
+  position: fixed;
+  z-index: 9;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+}
+
+.popup-edit {
+  position: fixed;
+  z-index: 10;
+  padding: 40px 50px;
+  border-radius: 3px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup-edit form {
+  flex-direction: row;
+  gap: 30px;
+  padding: 0;
+  box-shadow: none;
+}
+
+.popup-edit form textarea {
+  height: 80px;
+  padding: 5px 10px;
+  resize: none;
+  border-radius: 3px;
+  background-color: #f7f7f7;
+}
+
+.popup-edit form div {
+  min-width: 300px;
+}
+
+.popup-edit h4 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.popup-edit h4::after {
+  content: "";
+  display: block;
+  width: 7%;
+  height: 2px;
+  background-color: #ffa516;
+}
+
+.popup-edit .actions {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.popup-edit .actions button:first-child {
+  color: black;
+  font-weight: 300;
+}
+
+.popup-edit .actions button:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 34px;
+  width: 100px;
+  padding: 5px 15px;
+  color: white;
+  font-weight: 300;
+  background-color: #ffa516;
+  transition: all 150ms ease-in-out;
+}
+
+.loading {
+  background-color: white;
+}
+
+.popup-edit .actions button:last-child .loader {
+  width: 30px;
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 5px), #000 0);
+}
+
+.popup-edit .actions button:last-child:hover {
+  background-color: #f09b13;
+  transform: scale(0.99);
+}
