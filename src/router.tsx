@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
     element: <BackOffice />,
     children: [
       {
-        path: "info",
+        path: "",
         element: <Personel />,
       },
       {

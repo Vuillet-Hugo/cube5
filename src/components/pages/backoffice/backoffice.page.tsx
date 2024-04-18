@@ -40,11 +40,7 @@ export default function BackOffice() {
         <div className="sidenav">
           <ul>
             <li>
-              <Link to={""}>Étudiants</Link>
-            </li>
-            <Separator className="bg-primary-foreground" />
-            <li>
-              <Link to={"/personel/info"}>Informations personnel</Link>
+              <Link to={"/personel"}>Informations personnel</Link>
             </li>
             <Separator className="bg-primary-foreground" />
             <li>
