@@ -10,6 +10,7 @@ import { FormationsPage } from "./components/formations/formations.page";
 import BackOffice from "./components/pages/backoffice/backoffice.page";
 import Personel from "./components/backoffice/personel/personel.component";
 import Etudiant from "./components/backoffice/etudiants/etudiant.component";
+import GestionContent from "./components/backoffice/content/content.component";
 import Positionnement from "./components/backoffice/positionnement/positionnement.component";
 
 export const router = createBrowserRouter([
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: "info",
         element: <Personel />,
+      },
+      {
+        path: "gestion",
+        element: <GestionContent />,
       },
       {
         path: "etudiant",

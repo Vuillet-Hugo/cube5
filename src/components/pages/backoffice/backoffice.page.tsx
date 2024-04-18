@@ -11,8 +11,8 @@ import "./backoffice.style.css";
 import { Separator } from "@/components/ui/separator";
 
 export default function BackOffice() {
-  const [token, setToken] = useState<string>(
-    localStorage.getItem("token") || ""
+  const [token, setToken] = useState<string | null>(
+    localStorage.getItem("token") || null
   );
   const navigate = useNavigate();
 
@@ -45,6 +45,10 @@ export default function BackOffice() {
             <Separator className="bg-primary-foreground" />
             <li>
               <Link to={"/personel/info"}>Informations personnel</Link>
+            </li>
+            <Separator className="bg-primary-foreground" />
+            <li>
+              <Link to={"gestion"}>Gestion de contenu</Link>
             </li>
             <Separator className="bg-primary-foreground" />
             <li>

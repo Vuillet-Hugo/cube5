@@ -1,0 +1,169 @@
+.gestioncontent-box {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "qualification module"
+    "list-data list-data";
+  gap: 20px;
+}
+
+.gestioncontent-box form {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 25px;
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.gestioncontent-box form h4 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.gestioncontent-box form h4::after {
+  content: "";
+  display: block;
+  width: 7%;
+  height: 2px;
+  background-color: #ffa516;
+}
+
+.gestioncontent-box form .row {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 15px 0;
+}
+
+.gestioncontent-box form .row label {
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+
+.gestioncontent-box form .row label::after {
+  content: "";
+  display: block;
+  width: 7%;
+  height: 2px;
+  margin-bottom: 3px;
+  background-color: #ffa516;
+}
+
+.gestioncontent-box form .row input,
+.gestioncontent-box form .row select,
+.gestioncontent-box form .row textarea {
+  padding: 5px 10px;
+  font-weight: 300;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.gestioncontent-box form .row textarea {
+  resize: none;
+  height: 110px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.gestioncontent-box form select {
+  padding: 7px 10px !important;
+}
+
+.gestioncontent-box form .modules {
+  max-height: 180px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 2px solid #e8e8e8;
+  border-radius: 3px;
+  margin: 8px 0;
+  padding: 6px;
+}
+
+.gestioncontent-box form .modules ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 15px;
+  margin: 3px 0;
+}
+
+.gestioncontent-box form .modules ul li button {
+  color: black;
+  width: initial;
+  margin: initial;
+  padding: initial;
+  background-color: initial;
+}
+
+.gestioncontent-box form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  margin: 15px auto 10px auto;
+  padding: 8px 15px;
+  color: white;
+  font-weight: 300;
+  background-color: #ffa516;
+  transition: all 150ms ease-in-out;
+}
+
+.loading {
+  background-color: white !important;
+}
+
+.gestioncontent-box button .loader {
+  width: 30px;
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 5px), #000 0);
+}
+
+.gestioncontent-box form button:hover {
+  background-color: #ef9b15;
+  transform: scale(0.99);
+}
+
+.qualification-box {
+  grid-area: qualification;
+}
+
+.module-form {
+  grid-area: module;
+  height: fit-content;
+}
+
+.list-data-box {
+  grid-area: list-data;
+  padding: 20px 30px 23px 30px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.selected {
+  border: 2px solid #e8e8e8;
+  border-bottom: 2px solid white;
+}
+
+.not-selected {
+  border-bottom: 2px solid #e8e8e8;
+}
+
+.list-data-box .panel {
+  position: relative;
+  bottom: -12px;
+  background: white;
+  left: 10px;
+  width: fit-content;
+}
+
+.list-data-box .panel button {
+  width: 200px;
+  padding: 5px 0;
+}
+
+.list-data-box .bottom {
+  max-height: 600px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
