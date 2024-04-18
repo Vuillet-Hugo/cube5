@@ -7,7 +7,9 @@ import Evenements from "./components/accueil/evenements";
 import { Separator } from "./components/ui/separator";
 import Contacts from "./components/accueil/Contacts";
 import ScrollToTopButton from "./components/accueil/ScrollToTopBtn";
+
 import { Outlet } from "react-router-dom";
+
 
 export default function NewsPage() {
   const scrollActualites = useRef(null);
@@ -50,7 +52,9 @@ export default function NewsPage() {
           <ScrollToTopButton />
         </div>
       </div>
+
       <Outlet />
+
     </div>
   );
 }
