@@ -52,7 +52,7 @@ export default function BackOffice() {
             </li>
             <Separator className="bg-primary-foreground" />
             <li>
-              <Link to={""}>Paramètres</Link>
+            <Link to="/personel/parametre">Paramètres</Link> 
             </li>
           </ul>
         </div>
